@@ -1,3 +1,11 @@
+.primary-button{
+    padding: 8em;
+    background-color: black;
+    border: solid 2px black;
+    margin: 1em;
+    color: white;
+}
+
 .new-item{
     color: white;
 }
