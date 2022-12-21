@@ -1,3 +1,5 @@
+import CartWidget from "../components/CartWidget/CartWidget";
+import "../App.css";
 export default function Header() {
     return (
       <header className="App-header">
@@ -11,6 +13,7 @@ export default function Header() {
             <li>Contacto</li>
           </ul>
         </div>
+          <CartWidget />
       </header>
     );
   }

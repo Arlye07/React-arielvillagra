@@ -1,0 +1,36 @@
+
+  
+  .cart{
+    display: relative;
+  }
+  .cart span {
+    background-color: lightblue;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  .cart1{
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart2{
+    display: flex;
+    position: relative;
+    height: 50px;
+  }
+  
+  .cart3{
+    display: flex;
+    position: absolute;
+    margin-right: 20px;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+  }
+  

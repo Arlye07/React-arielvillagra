@@ -26,13 +26,16 @@ highlightedContent {
 highlightedContent img {
   width: 100%;
 }
+.cart{
+  color: blue;
+}
 .button {
   display: inline-block;
   color: #282c34;
   background-color: lightblue;
   border: solid black;
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .bottomContainer {
   display: flex;
@@ -74,6 +77,8 @@ main{
   pointer-events: none;
 }
 
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -84,7 +89,7 @@ main{
   background-color: #282c34;
   min-height: 20vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);

@@ -7,9 +7,10 @@ import "./App.css";
 //import Product from './components/product';
 import Product from "./components/Modal/product";
 import { ProductDetail } from "./components/Modal/product";
-import Header from "./Containers/Header";
+import Header from "./Containers/NavBar";
 import HighlightedContent from "./Containers/HighlightedContent";
 import NewsContainer from "./Containers/NewsContainer";
+//import CartWidget from "./components/CartWidget/CartWidget";
 
 
 
