@@ -8,6 +8,7 @@ import HighlightedContent from "./Containers/HighlightedContent";
 import NewsContainer from "./Containers/NewsContainer";
 import ItemListContainer from "./components/ItemListContainer";
 
+
 function MainContainer({ children }) {
   return <main>{children}</main>;
 }
