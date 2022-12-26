@@ -2,7 +2,6 @@ import CartWidget from "../components/CartWidget/CartWidget";
 import ImagenLogo from "../components/Header/ImagenLogo";
 import "../App.css";
 
-
 export default function Header() {
   return (
     <header className="App-header">
