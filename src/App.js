@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <div className="App">
         <Header />
-        <ItemListContainer greeting={"Hola usuario Bien venido"} />
+        <ItemListContainer greeting={"Hola usuario, Bien venido!!!"} />
         <MainContainer>
           <HighlightedContent />
           <Button className="bottomContainer" type="primary">
