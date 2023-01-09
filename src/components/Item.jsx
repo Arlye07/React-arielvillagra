@@ -6,7 +6,7 @@ const Item = ({producto}) =>{
     producto.price - (producto.price *producto.descuento) /100;
     return(
         <div className="item">
-            <img src={producto.img} width="200px" alt={producto.title} />
+            <img src={producto.img} width="220px" height="160px" alt={producto.title} />
             <article className="info">
                 <h2> {producto.title}      </h2>
                 <h4 className="descuento">{producto.descuento}% off</h4>
