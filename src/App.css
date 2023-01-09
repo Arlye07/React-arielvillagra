@@ -77,7 +77,10 @@ main{
   pointer-events: none;
 }
 
-
+.footer-a{
+max-width: 1024px;
+margin: 0 auto;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

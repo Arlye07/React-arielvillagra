@@ -1,5 +1,3 @@
-import './style.css';
-
 function Modal({children, title}){
     return (
         <>
