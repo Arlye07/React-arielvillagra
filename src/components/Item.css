@@ -1,3 +1,9 @@
+.active{
+    background-color: rgba(99, 4, 102, 0.59);
+    border-radius: 8px;
+    padding: 5px 7px;
+    
+}
 .item{
     display: inline-block;
     position: relative;
@@ -43,8 +49,8 @@
     position: absolute;
     top: -6px;
     right: -6px;
-    background-color: rgb(98, 97, 97);
-    color: rgb(255, 255, 255);
+    background-color: rgb(160, 0, 168);
+    color: white;
     display: inline-block;
     padding: 4px 6px;
     border-radius: 8px;
