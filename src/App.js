@@ -29,7 +29,7 @@ function App() {
             <ItemListContainer greeting={"Hola usuario, Bienvenido!!!"} />
           } />
           
-          <Route path="/detail" element={<ItemDetailContainer/>} />
+          <Route path="/detail/:id" element={<ItemDetailContainer/>} />
           <Route path="/cart" element={<Cart/>} />
           </Routes>
           <MainContainer>

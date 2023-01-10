@@ -1,17 +1,19 @@
 import React from "react";
 
-const ItemDetail = () => {
+const ItemDetail = ({item}) => {
+  const discount =
+  item.price - (item.price * item.descuento) /100;
   return (
     <div className="container-page container-detail">
-      <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/931/176/products/31-50ded82df6a0e231d816364111195879-480-0.jpg" 
+      <img src={item.img} 
       alt="detail" />
 
       <article>
-        <h2>Nombre del producto</h2>
-        <h4>10% OFF</h4>
+        <h2>{item.title}</h2>
+        <h4>{item.descuento}% OFF</h4>
         <section>
-          <h3>$1500.-</h3>
-          <h5>$2200.-</h5>
+          <h3>$1{discount}</h3>
+          <h5>${item.price}.-</h5>
         </section>
         <span className="info-span">
           Todos los precios estan en pesos Argentinos
@@ -19,7 +21,7 @@ const ItemDetail = () => {
         <hr />
         <h3 className="cuotas">
           Hasta <strong>12</strong> cuotas sin interes de
-          <strong>$150</strong>
+          <strong>${item.price/12}</strong>
         </h3>
         <button className="metodos-pagos">
           Conoce todos los metodos de pagos
