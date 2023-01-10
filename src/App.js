@@ -1,5 +1,3 @@
-import { Button } from "antd";
-import { useState } from "react";
 import "antd/dist/reset.css";
 import "./App.css";
 import Header from "./Containers/NavBar";
@@ -14,7 +12,7 @@ function MainContainer({ children }) {
 }
 
 function App() {
-  const [ari, setAri] = useState("ari");
+  
   
   return (
     <BrowserRouter>
@@ -34,13 +32,6 @@ function App() {
           </Routes>
           <MainContainer>
           </MainContainer>
-          <Button
-            onClick={() => setAri("gooButton")}
-            className="bottomContainer"
-            type="primary"
-          >
-            Button{ari}
-          </Button>
           <Footer />
         </div>
       </div>

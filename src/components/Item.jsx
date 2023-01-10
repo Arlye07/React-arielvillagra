@@ -9,12 +9,12 @@ const Item = ({producto}) =>{
         <div className="item">
             <img src={producto.img} width="220px" height="160px" alt={producto.title} />
             <article className="info">
-                <h2> {producto.title}      </h2>
+                <h2> {producto.title}</h2>
                 <h4 className="descuento">{producto.descuento}% off</h4>
                 <div className="info-price">
-                <h3>${discount}.-</h3>
-                <h5 className="info-descuento">${producto.price}.-</h5>
                 </div>
+                <h3>${discount}.-</h3>
+                <h5 className="info-descuento"> ${producto.price}.-</h5>
             <Link className="ver-detalle" to={`/detail/${producto.id}`}>Ver detalle</Link>
             </article>
         </div>
