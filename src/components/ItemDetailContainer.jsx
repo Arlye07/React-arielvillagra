@@ -6,14 +6,15 @@ import { products } from "./productos/productos";
 const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
   const valor = useParams();
-   console.log(valor);
+  console.log(valor);
 
   useEffect(() => {
     const getProduct = () => {
       return new Promise((res, rej) => {
-          const productoEncontrado = products.find( 
-               (prod)=>prod.id === parseInt(valor.id) );
-               
+        const productoEncontrado = products.find(
+          (prod) => prod.id === parseInt(valor.id)
+        );
+
         setTimeout(() => {
           res(productoEncontrado);
         }, 500);

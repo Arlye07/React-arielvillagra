@@ -1,13 +1,11 @@
 import React from "react";
 import "./Item.css";
 
-const ItemDetail = ({item}) => {
-  const discount =
-  item.price - (item.price * item.descuento) /100;
+const ItemDetail = ({ item }) => {
+  const discount = item.price - (item.price * item.descuento) / 100;
   return (
     <div className="container-page container-detail">
-      <img src={item.img} 
-      alt="detail" />
+      <img src={item.img} alt="detail" />
 
       <article>
         <h2>{item.title}</h2>
@@ -22,7 +20,7 @@ const ItemDetail = ({item}) => {
         <hr />
         <h3 className="cuotas">
           Hasta <strong>12</strong> cuotas sin interes de
-          <strong>${item.price/12}</strong>
+          <strong>${item.price / 12}</strong>
         </h3>
         <button className="metodos-pagos">
           Conoce todos los metodos de pagos

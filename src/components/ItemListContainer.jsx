@@ -6,16 +6,16 @@ import ItemList from "./ItemList";
 const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);
 
-
-  const {categoryName} = useParams()
+  const { categoryName } = useParams();
 
   useEffect(() => {
     const getProducts = () => {
       return new Promise((res, rej) => {
-         const productosFiltrados = products.filter(
-            (prod)=> prod.category === categoryName);
+        const productosFiltrados = products.filter(
+          (prod) => prod.category === categoryName
+        );
 
-            const prodListados = categoryName ? productosFiltrados : products
+        const prodListados = categoryName ? productosFiltrados : products;
         setTimeout(() => {
           res(prodListados);
         }, 300);
