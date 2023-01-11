@@ -76,7 +76,10 @@ main{
   height: 40vmin;
   pointer-events: none;
 }
-
+.nav-color{
+  font-weight: bold;
+  color: purple;
+}
 .footer-a{
 max-width: 1024px;
 margin: 0 auto;

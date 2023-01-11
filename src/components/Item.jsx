@@ -13,7 +13,7 @@ const Item = ({ producto }) => {
         alt={producto.title}
       />
       <article className="info">
-        <h2> {producto.title}</h2>
+        <h2 className="detail-titulo"> {producto.title}</h2>
         <h4 className="descuento">{producto.descuento}% off</h4>
         <div className="info-price"></div>
         <h3>${discount}.-</h3>

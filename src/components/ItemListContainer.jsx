@@ -9,6 +9,7 @@ const ItemListContainer = ({ greeting }) => {
   const { categoryName } = useParams();
 
   useEffect(() => {
+   
     const getProducts = () => {
       return new Promise((res, rej) => {
         const productosFiltrados = products.filter(

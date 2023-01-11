@@ -7,12 +7,12 @@ const ItemDetail = ({ item }) => {
     <div className="container-page container-detail">
       <img src={item.img} alt="detail" />
 
-      <article>
-        <h2>{item.title}</h2>
+      <article className="">
+        <h2 className="detail-titulo">{item.title}</h2>
         <h4>{item.descuento}% OFF</h4>
         <section>
-          <h3>${discount}</h3>
-          <h5>${item.price}.-</h5>
+          <h3 className="detail-titulo">${discount}</h3>
+          <h5 className="info-descuento">${item.price}.-</h5>
         </section>
         <span className="info-span">
           Todos los precios estan en pesos Argentinos

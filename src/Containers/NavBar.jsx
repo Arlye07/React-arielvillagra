@@ -11,8 +11,8 @@ export default function Header() {
       </Link>
       <div className="logo">R.S.</div>
       <div>
-        <ul>
-          <li>
+        <ul className="nav-color">
+          <li className="nav-color">
             <NavLink to="/">Productos</NavLink>
           </li>
           <li>
