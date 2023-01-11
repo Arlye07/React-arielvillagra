@@ -1,4 +1,5 @@
 import React from "react";
+import "./Item.css";
 
 const ItemDetail = ({item}) => {
   const discount =
@@ -12,7 +13,7 @@ const ItemDetail = ({item}) => {
         <h2>{item.title}</h2>
         <h4>{item.descuento}% OFF</h4>
         <section>
-          <h3>$1{discount}</h3>
+          <h3>${discount}</h3>
           <h5>${item.price}.-</h5>
         </section>
         <span className="info-span">

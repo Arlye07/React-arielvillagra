@@ -11,9 +11,9 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     const getProduct = () => {
       return new Promise((res, rej) => {
-          const productoEncontrado = products.find(
-              (prod)=>prod.id === 1
-              );
+          const productoEncontrado = products.find( 
+               (prod)=>prod.id === parseInt(valor.id) );
+               
         setTimeout(() => {
           res(productoEncontrado);
         }, 500);
@@ -27,7 +27,7 @@ const ItemDetailContainer = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [valor.id]);
   return <ItemDetail item={item} />;
 };
 

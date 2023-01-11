@@ -4,7 +4,7 @@ import "./Item.css"
 
 const Item = ({producto}) =>{
     const discount = 
-    producto.price - (producto.price *producto.descuento) /100;
+    producto.price - (producto.price * producto.descuento) /100;
     return(
         <div className="item">
             <img src={producto.img} width="220px" height="160px" alt={producto.title} />

@@ -25,7 +25,8 @@
   flex-wrap: wrap;
 }
 .ver-detalle {
-  color: rgb(43, 43, 43);
+  color: rgb(0, 0, 0);
+  
 }
 .info {
   border-top: 4px solid rgb(199, 25, 199);
