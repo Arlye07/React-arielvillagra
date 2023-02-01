@@ -88,3 +88,19 @@
   font-weight: bold;
 
 }
+.contador{
+  text-align: center;
+  border:solid;
+  flex-wrap: wrap;
+}
+.contador1{
+  border: solid 1px;
+  background-color: rgb(143, 106, 146);
+}
+.container-contador{
+  display: flex;
+  text-align: center;
+  margin: 2px;
+  padding: 2px;
+  align-items: center;
+}

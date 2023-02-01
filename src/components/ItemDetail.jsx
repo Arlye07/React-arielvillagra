@@ -1,9 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Item.css";
+import Contador from "./contador";
 
 const ItemDetail = ({ item }) => {
   const discount = item.price - (item.price * item.descuento) / 100;
-  return (
+
+  const [confirmado, setConfirmado]= useState(false)
+
+  const handleClick = (e) => {
+    console.log(e.target);
+  }
+  const handleChange = (e) => {
+    console.log(e.target);
+  }
+  const handleAdd = (cantidad)=>{setConfirmado(true)}
+   return (
     <div className="container-page container-detail">
       <img src={item.img} alt="detail" />
 
@@ -22,10 +33,13 @@ const ItemDetail = ({ item }) => {
           Hasta <strong>12</strong> cuotas sin interes de
           <strong>${item.price / 12}</strong>
         </h3>
-        <button className="metodos-pagos">
+        <input type="text"  onChange={handleChange}/> <br />
+        <button className="metodos-pagos" onClick={handleClick}>
           Conoce todos los metodos de pagos
         </button>
         <hr />
+        <Contador stock={7} handleAdd={handleAdd} />
+        {confirmado && <button>Agregar al Carrito </button>}
       </article>
     </div>
   );
