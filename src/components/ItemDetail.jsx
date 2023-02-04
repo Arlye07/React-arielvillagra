@@ -1,19 +1,25 @@
 import React, {useState} from "react";
 import "./Item.css";
 import Contador from "./contador";
+import { useContext } from "react";
+import { contexto } from "./Context/CustomProvider";
 
 const ItemDetail = ({ item }) => {
   const discount = item.price - (item.price * item.descuento) / 100;
 
   const [confirmado, setConfirmado]= useState(false)
+  const {agregarProducto} = useContext(contexto)
+  const [cantidadLocal, setCantidadLocal] = useState(1)
 
-  const handleClick = (e) => {
-    console.log(e.target);
+  
+  const handleAdd = (cantidad)=>{
+    setCantidadLocal (cantidad)
+    setConfirmado(true)
   }
-  const handleChange = (e) => {
-    console.log(e.target);
-  }
-  const handleAdd = (cantidad)=>{setConfirmado(true)}
+
+  const handleClick = ()=>{ 
+    agregarProducto(item, cantidadLocal)
+   }
    return (
     <div className="container-page container-detail">
       <img src={item.img} alt="detail" />
@@ -33,13 +39,9 @@ const ItemDetail = ({ item }) => {
           Hasta <strong>12</strong> cuotas sin interes de
           <strong>${item.price / 12}</strong>
         </h3>
-        <input type="text"  onChange={handleChange}/> <br />
-        <button className="metodos-pagos" onClick={handleClick}>
-          Conoce todos los metodos de pagos
-        </button>
         <hr />
         <Contador stock={7} handleAdd={handleAdd} />
-        {confirmado && <button>Agregar al Carrito </button>}
+        {confirmado && <button on onClick={handleClick}>Agregar al Carrito </button>}
       </article>
     </div>
   );

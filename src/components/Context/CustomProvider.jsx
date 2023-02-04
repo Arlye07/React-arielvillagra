@@ -8,18 +8,19 @@ const CarritoProvider = ({ children }) => {
   const [total, setTotal] = useState(0);
   const [cantidad, setCantidad] = useState(0);
 
-  const agregarProducto = ()=>{
-    const testProducto = {
-        id:1,
-        nombre: "pro 1",
-        precio: 1000,
-        cantidad: 5
-    }
-    setCarrito([testProducto])
-    setTotal(testProducto.precio * testProducto.cantidad)
-    setCantidad(testProducto.cantidad)
-  }
+  const agregarProducto = (producto, cantidad) => {
 
+    producto.cantidad= cantidad
+
+    setCarrito([producto]);
+    setTotal(producto.precio * cantidad);
+    setCantidad(cantidad);
+  };
+
+//   const eliminarProducto= () =>{}
+  // const vaciarCarrito= () =>{setCarrito([])};
+//   const estaEnCarrito= () =>{}
+  
   const valorDelContexto = {
     carrito,
     total,
@@ -31,4 +32,3 @@ const CarritoProvider = ({ children }) => {
   return <Provider value={valorDelContexto}>{children}</Provider>;
 };
 export default CarritoProvider;
-
