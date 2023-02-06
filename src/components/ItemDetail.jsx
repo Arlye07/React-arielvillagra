@@ -41,7 +41,7 @@ const ItemDetail = ({ item }) => {
         </h3>
         <hr />
         <Contador stock={7} handleAdd={handleAdd} />
-        {confirmado && <button on onClick={handleClick}>Agregar al Carrito </button>}
+        {confirmado && <button onClick={handleClick}>Agregar al Carrito</button>}
       </article>
     </div>
   );

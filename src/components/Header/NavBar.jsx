@@ -1,6 +1,5 @@
-import CartWidget from "../components/CartWidget/CartWidget";
-import ImagenLogo from "../components/Header/ImagenLogo";
-import "../App.css";
+import CartWidget from "../CartWidget/CartWidget";
+import ImagenLogo from "./ImagenLogo";
 import { NavLink, Link } from "react-router-dom";
 
 export default function Header() {

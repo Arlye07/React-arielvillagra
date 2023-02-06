@@ -15,7 +15,12 @@ const ItemListContainer = ({ greeting }) => {
     const getProducts = () => {
 
      // const pedido = getDocs (productsCollection)
-      const filtro = query(productsCollection,where("category", "==","categoryName"))
+     let filtro =[]
+     if (categoryName){ 
+      filtro = query(productsCollection,where("category", "==","categoryName"))
+    }else{
+      filtro = productsCollection
+    };
       const pedidoPorCategoria = getDocs(filtro)
 
       pedidoPorCategoria
@@ -28,6 +33,7 @@ const ItemListContainer = ({ greeting }) => {
       .catch((error)=>{
         console.log(error);
       })
+    
        return new Promise((res, rej) => {
          const productosFiltrados = products.filter(
            (prod) => prod.category === categoryName

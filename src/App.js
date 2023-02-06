@@ -1,12 +1,12 @@
-import "antd/dist/reset.css";
 import "./App.css";
-import Header from "./Containers/NavBar";
+import Header from "./components/Header/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import Footer from "./components/footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Cart from "./components/Cart";
 import CustomProvider from "./components/Context/CustomProvider";
+import { ToastContainer } from "react-toastify";
 
 
 function MainContainer({ children }) {
@@ -43,6 +43,7 @@ function App() {
           </div>
         </div>
       </BrowserRouter>
+      <ToastContainer autoClose={1000}/>
     </CustomProvider>
   );
 }

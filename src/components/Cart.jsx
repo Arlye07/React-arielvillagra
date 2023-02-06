@@ -1,13 +1,13 @@
 import { serverTimestamp, addDoc } from "firebase/firestore";
 import { useContext } from "react";
 import { contexto } from "./Context/CustomProvider";
-import { ventasCollection, ventasCollection } from "../firebaseConfig";
+import { ventasCollection } from "../firebaseConfig";
 
 const Cart =()=>{
-    const {carrito,agregarProducto}= useContext(contexto)
+    const {carrito,removeOneFromCart}= useContext(contexto)
 
    const handleClick = () =>{
-    agregarProducto()
+    removeOneFromCart()
    }
 const handleCompra =()=>{
     
@@ -18,10 +18,12 @@ const handleCompra =()=>{
             telefono:"123"
         },
         carrito: carrito,
-        fecha:serverTimestamp()
-    }
-    const pedido = addDoc(ventasCollection, compra)
-   
+        fecha:serverTimestamp(),
+
+    };
+    addDoc(ventasCollection, compra)
+    .then((resultado)=>{ console.log(resultado);})
+    .catch((error)=>{console.log(error);})
 }
     return(
         <div>
