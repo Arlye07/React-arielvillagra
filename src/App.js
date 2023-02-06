@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Cart from "./components/Cart";
 import CustomProvider from "./components/Context/CustomProvider";
-import { ToastContainer } from "react-toastify";
 
 
 function MainContainer({ children }) {
@@ -43,7 +42,6 @@ function App() {
           </div>
         </div>
       </BrowserRouter>
-      <ToastContainer autoClose={1000}/>
     </CustomProvider>
   );
 }

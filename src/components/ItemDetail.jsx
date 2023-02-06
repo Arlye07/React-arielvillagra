@@ -8,7 +8,7 @@ const ItemDetail = ({ item }) => {
   const discount = item.price - (item.price * item.descuento) / 100;
 
   const [confirmado, setConfirmado]= useState(false)
-  const {agregarProducto} = useContext(contexto)
+  const {addToCart} = useContext(contexto)
   const [cantidadLocal, setCantidadLocal] = useState(1)
 
   
@@ -18,7 +18,7 @@ const ItemDetail = ({ item }) => {
   }
 
   const handleClick = ()=>{ 
-    agregarProducto(item, cantidadLocal)
+    addToCart(item, cantidadLocal)
    }
    return (
     <div className="container-page container-detail">
