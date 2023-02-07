@@ -4,10 +4,10 @@ import { contexto } from "./Context/CustomProvider";
 import { ventasCollection } from "../firebaseConfig";
 
 const Cart =()=>{
-    const {carrito,removeOneFromCart}= useContext(contexto)
+    const {carrito,agregarProducto}= useContext(contexto)
 
    const handleClick = () =>{
-    removeOneFromCart()
+    agregarProducto()
    }
 const handleCompra =()=>{
     
