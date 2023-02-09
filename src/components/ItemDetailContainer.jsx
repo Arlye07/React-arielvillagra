@@ -9,18 +9,16 @@ const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
   const valor = useParams();
 
-
   useEffect(() => {
     const getProduct = () => {
-      const referenciaDoc = doc(productsCollection,"1")
-      const pedido = getDoc(referenciaDoc)
+      const referenciaDoc = doc(productsCollection, "1");
+      const pedido = getDoc(referenciaDoc);
       pedido
-      .then((resultado)=>{
-        const producto = resultado.data()
-        setItem(producto)
-      })
-      .catch((error)=>{})
-
+        .then((resultado) => {
+          const producto = resultado.data();
+          setItem(producto);
+        })
+        .catch((error) => {});
 
       return new Promise((res, rej) => {
         const productoEncontrado = products.find(
@@ -41,7 +39,7 @@ const ItemDetailContainer = () => {
         console.log(error);
       });
   }, [valor.id]);
-  return <>{item.id ? <ItemDetail item={item}/>: <p>Cargando...</p>}</>;
+  return <>{item.id ? <ItemDetail item={item} /> : <p>Cargando...</p>}</>;
 };
 
 export default ItemDetailContainer;

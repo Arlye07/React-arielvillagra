@@ -8,17 +8,17 @@ const ItemDetail = ({ item }) => {
   const discount = item.price - (item.price * item.descuento) / 100;
 
   const [confirmado, setConfirmado] = useState(false);
-  const [cantidadLocal, setCantidadLocal] = useState(0)
+  const [cantidadLocal, setCantidadLocal] = useState(0);
   const { addToCart } = useContext(contexto);
 
   const handleAdd = (cantidad) => {
-    setCantidadLocal (cantidad)
+    setCantidadLocal(cantidad);
     setConfirmado(true);
   };
 
-    const handleClick = () => {
-      addToCart(item, cantidadLocal);
-    };
+  const handleClick = () => {
+    addToCart(item, cantidadLocal);
+  };
   return (
     <div className="container-page container-detail">
       <img src={item.img} alt="detail" width="420px" height="360px" />
@@ -46,7 +46,6 @@ const ItemDetail = ({ item }) => {
           {confirmado && (
             <button onClick={handleClick}>Agregar al Carrito</button>
           )}
-                    
         </div>
       </article>
     </div>

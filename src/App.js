@@ -7,7 +7,6 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import Cart from "./components/Cart";
 import CustomProvider from "./components/Context/CustomProvider";
 
-
 function MainContainer({ children }) {
   return <main>{children}</main>;
 }

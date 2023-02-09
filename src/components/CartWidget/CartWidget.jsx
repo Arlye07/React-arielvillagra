@@ -8,8 +8,6 @@ export default function CartWidget() {
 
   const { carrito } = useContext(contexto);
 
-  
-
   return (
     <>
       <div className="cart1">
