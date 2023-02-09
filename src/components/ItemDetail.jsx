@@ -8,7 +8,6 @@ const ItemDetail = ({ item }) => {
   const discount = item.price - (item.price * item.descuento) / 100;
 
   const [confirmado, setConfirmado] = useState(false);
-  //const {agregarProducto} = useContext(contexto)
   const [cantidadLocal, setCantidadLocal] = useState(0)
   const { addToCart } = useContext(contexto);
 
@@ -17,9 +16,6 @@ const ItemDetail = ({ item }) => {
     setConfirmado(true);
   };
 
-  //  const handleClick1 = ()=>{
-  //    agregarProducto(item, cantidadLocal)
-  //   }
     const handleClick = () => {
       addToCart(item, cantidadLocal);
     };

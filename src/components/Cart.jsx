@@ -41,10 +41,10 @@ const Cart = () => {
                 )
             })}
       <h3>{carrito.items.length > 1 ? carrito.items.length + ' productos' : carrito.items.length + ' producto'}</h3>
-            <button onClick={deleteAllCart}>Borrar carrito</button>
+            <button className="contador2" onClick={deleteAllCart}>Borrar carrito</button>
             <br />
       <div> {JSON.stringify(carrito)} </div> <br /><br />
-      <button onClick={handleCompra}>Finalizar Compra</button> <br />
+      <button className="contador1" onClick={handleCompra}>Finalizar Compra</button> <br />
     </div>
   );
 };
