@@ -43,16 +43,16 @@ ademas se puede regresar tocando el logo.
 
 
 ####Drescripcion del alumno;
-Nombre : Ariel Villagra,
-Edad: 32
-Contacto: arielvillagra7@gmail.com
-Cursado: en Coder cursando "Full Stack"(desarrollo web, JS. React posteriormente backend)
+*Nombre : Ariel Villagra,
+*Edad: 32
+*Contacto: arielvillagra7@gmail.com
+*Cursado: en Coder cursando "Full Stack"(desarrollo web, JS. React *posteriormente backend)
 
 ####Extra:
-Dedicacion: 1er curso entero sonbre programacion (desarrollo, js ahora React, )
-Ocupacion: Odontologo-Implantologia (desde 2015)
-Trabajo dia a dia: (cirugias dentales[varios centros 30%]), 70% consul de barrio,
-Objetivo: tratar de incorporar la programacion en mi vida conjuntamente a la odontologia.
+*Dedicacion: 1er curso entero sonbre programacion (desarrollo, js ahora React, )
+*Ocupacion: Odontologo-Implantologia (desde 2015)
+*Trabajo dia a dia: (cirugias dentales[varios centros 30%]), 70% consul de barrio,
+*Objetivo: tratar de incorporar la programacion en mi vida conjuntamente a la odontologia.
 
 
 ####Mail: arielvillagra7@gmail.com
