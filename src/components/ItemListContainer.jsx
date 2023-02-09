@@ -14,7 +14,6 @@ const ItemListContainer = ({ greeting }) => {
    
     const getProducts = () => {
 
-     // const pedido = getDocs (productsCollection)
      let filtro =[]
      if (categoryName){ 
       filtro = query(productsCollection,where("category", "==","categoryName"))

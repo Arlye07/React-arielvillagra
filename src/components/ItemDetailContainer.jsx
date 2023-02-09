@@ -7,7 +7,6 @@ import { productsCollection } from "../firebaseConfig";
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
-  //const [cargando, setCargando] = useState(true)
   const valor = useParams();
 
 
@@ -19,7 +18,6 @@ const ItemDetailContainer = () => {
       .then((resultado)=>{
         const producto = resultado.data()
         setItem(producto)
-        //setCargando(false)
       })
       .catch((error)=>{})
 
@@ -44,7 +42,6 @@ const ItemDetailContainer = () => {
       });
   }, [valor.id]);
   return <>{item.id ? <ItemDetail item={item}/>: <p>Cargando...</p>}</>;
-  //<>{!cargando ? <ItemDetail item={item}/>: <p>Cargando...</p>}</>;
 };
 
 export default ItemDetailContainer;

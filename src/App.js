@@ -6,8 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Cart from "./components/Cart";
 import CustomProvider from "./components/Context/CustomProvider";
-import "react-toastify";
-import { ToastContainer } from "react-toastify";
+
 
 function MainContainer({ children }) {
   return <main>{children}</main>;
@@ -40,7 +39,6 @@ function App() {
             </Routes>
             <MainContainer></MainContainer>
             <Footer />
-            <ToastContainer />
           </div>
         </div>
       </BrowserRouter>
