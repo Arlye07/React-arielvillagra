@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./Item.css";
 import Contador from "./contador";
 import { useContext } from "react";
@@ -7,25 +7,25 @@ import { contexto } from "./Context/CustomProvider";
 const ItemDetail = ({ item }) => {
   const discount = item.price - (item.price * item.descuento) / 100;
 
-  const [confirmado, setConfirmado]= useState(false)
-  const {agregarProducto} = useContext(contexto)
-  const [cantidadLocal, setCantidadLocal] = useState(1)
+  const [confirmado, setConfirmado] = useState(false);
+  //const {agregarProducto} = useContext(contexto)
+  const [cantidadLocal, setCantidadLocal] = useState(0)
+  const { addToCart } = useContext(contexto);
 
-  
-  const handleAdd = (cantidad)=>{
+  const handleAdd = (cantidad) => {
     setCantidadLocal (cantidad)
-    setConfirmado(true)
-  }
+    setConfirmado(true);
+  };
 
-  const handleClick = ()=>{ 
-    agregarProducto(item, cantidadLocal)
-   }
-   return (
+  //  const handleClick1 = ()=>{
+  //    agregarProducto(item, cantidadLocal)
+  //   }
+    const handleClick = () => {
+      addToCart(item, cantidadLocal);
+    };
+  return (
     <div className="container-page container-detail">
-      <img src={item.img} alt="detail"
-      width="420px"
-      height="360px"
-      /> 
+      <img src={item.img} alt="detail" width="420px" height="360px" />
 
       <article className="">
         <h2 className="detail-titulo">{item.title}</h2>
@@ -43,8 +43,15 @@ const ItemDetail = ({ item }) => {
           <strong>${item.price / 12}</strong>
         </h3>
         <hr />
-        <Contador stock={7} handleAdd={handleAdd} />
-        {confirmado && <button onClick={handleClick}>Agregar al Carrito</button>}
+        <div>
+          <Contador stock={7} handleAdd={handleAdd} />
+        </div>
+        <div>
+          {confirmado && (
+            <button onClick={handleClick}>Agregar al Carrito</button>
+          )}
+                    
+        </div>
       </article>
     </div>
   );

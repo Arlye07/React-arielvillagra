@@ -94,13 +94,26 @@
   flex-wrap: wrap;
 }
 .contador1{
-  border: solid 1px;
+  border: solid 2px;
   background-color: rgb(143, 106, 146);
+  margin: 2px;
+  padding: 2px;
 }
 .container-contador{
-  display: flex;
+  display: block;
   text-align: center;
   margin: 2px;
   padding: 2px;
   align-items: center;
+}
+.cart-b{
+  border: solid;
+  background-color: rgba(235, 123, 235, 0.795);
+}
+.boton{
+  width: 3px;
+  height: 3px;
+}
+.fondoClaro{
+  background-color: rgb(255, 255, 255);
 }
