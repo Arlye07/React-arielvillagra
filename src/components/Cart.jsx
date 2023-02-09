@@ -44,7 +44,7 @@ const Cart = () => {
             <button className="contador2" onClick={deleteAllCart}>Borrar carrito</button>
             <br />
       <div> {JSON.stringify(carrito)} </div> <br /><br />
-      <button className="contador1" onClick={handleCompra}>Finalizar Compra</button> <br />
+      <button className="contador1 item:hover" onClick={handleCompra}>Finalizar Compra</button> <br />
     </div>
   );
 };
